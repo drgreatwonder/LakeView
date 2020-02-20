@@ -29,7 +29,7 @@
 
 
 
-  <h1 style="text-align: center;" class="mb-3 pt-5">OUR ACTIVITIES </h1>
+  <h1 style="text-align: center;" class="pt-5">OUR ACTIVITIES </h1>
   <div class="container contain mb-5">
     <div class="card up">
       <div class="face face1">

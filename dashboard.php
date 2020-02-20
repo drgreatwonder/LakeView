@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="asset/css/dashboard.css">
+    <link rel="stylesheet" href="asset/css/dashboards.css">
 </head>
 <body>
     <!-- Side navigation -->
@@ -13,6 +13,7 @@
     <a href="index.php">Home</a>
     <a href="#">Payments</a>
     <a href="#">Properties</a>
+    <a href="#">Visitors</a>
     <a href="#">Events</a>
   </div>
   
@@ -25,6 +26,7 @@
   <div class="container">
     <h4><b>John Doe</b></h4>
     <p>Architect & Engineer</p>
+  </div>
   </div>
 </div>
 </body>

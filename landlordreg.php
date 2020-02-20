@@ -11,7 +11,7 @@
       
           <h1 class="text-center mb-3">REGISTER</h1>
 
-          <form name="getstarted" action="" method="post" enctype="multipart/form-data">
+          <form name="landlordreg" action="landlordreg.php" method="post" enctype="multipart/form-data">
 
             <fieldset  class="p-3 mt-5">
               <legend>Personal Information</legend>
@@ -91,7 +91,7 @@
 
 
 
-          <form name="getstarted" action="" method="post" enctype="multipart/form-data">
+          <form name="landlordreg" action="landlordreg.php" method="post" enctype="multipart/form-data">
 
           
                       <fieldset  class="p-3 mt-5">

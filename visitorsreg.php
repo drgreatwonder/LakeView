@@ -22,7 +22,7 @@
         <div class="container p-5">
           <h1 class="text-center mb-3">REGISTER YOUR VISITOR</h1>
       
-          <form name="visitorsreg" class="m-5" action="" method="post" enctype="multipart/form-data">
+          <form name="visitorsreg" class="m-5" action="visitorsreg.php" method="post" enctype="multipart/form-data">
 
             <fieldset  class="p-3 mt-5"> 
               <legend>Personal Information</legend>

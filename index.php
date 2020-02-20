@@ -17,7 +17,7 @@
           <h1 style="text-align: center;">LAKEVIEW ESTATE</h1>
           <p>The best of the rest for all things everywhere. The best of the rest for all things everywhere. The best of the rest for all things everywhere. The best of the rest for all things everywhere. The best of the rest for all things everywhere.
             The best of the rest for aiolpyiolll things everywhere. </p>
-          <a class="btn btn-primary btn-lg align-middle" href="" role="button" data-toggle="modal" data-target="#elegantModalForm" id="modal">Get Started</a>
+          <a class="btn btn-info btn-lg align-middle" href="" role="button" data-toggle="modal" data-target="#elegantModalForm" id="modal">Get Started</a>
 
 
         </div>
@@ -25,16 +25,13 @@
         <!-- </div> -->
       </div>
     </div>
-  </div>\
-
-
-   n 
+  </div>
 
 
 
   <h1 style="text-align: center;" class="mb-3 pt-5">OUR ACTIVITIES </h1>
   <div class="container contain mb-5">
-    <div class="card">
+    <div class="card up">
       <div class="face face1">
         <div class="content">
           <img src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/design_128.png?raw=true">
@@ -48,7 +45,7 @@
         </div>
       </div>
     </div>
-    <div class="card">
+    <div class="card up">
       <div class="face face1">
         <div class="content">
           <img src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/code_128.png?raw=true">
@@ -62,7 +59,7 @@
         </div>
       </div>
     </div>
-    <div class="card">
+    <div class="card up">
       <div class="face face1">
         <div class="content">
           <img src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/launch_128.png?raw=true">

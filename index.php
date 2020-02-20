@@ -181,26 +181,22 @@
         <div class="modal-body mx-4">
           <!--Body-->
           <form method="post" enctype="multipart/form-data">
-            <div class="md-form mb-5">
+            <div class="md-form mb-3 pb-3">
+            <label data-error="wrong" data-success="right" for="Form-email1">Your Username</label>
               <input type="text" id="" name="username" class="form-control validate" required>
-              <label data-error="wrong" data-success="right" for="Form-email1">Your Username</label>
             </div>
 
             <div class="md-form pb-3">
-              <input type="password" id="" name="password" class="form-control validate" required>
               <label data-error="wrong" data-success="right" for="Form-pass1">Your password</label>
-              <p class="font-small blue-text d-flex justify-content-end">Forgot <a href="fpasswordpage.php" class="blue-text ml-1">
+              <input type="password" id="" name="password" class="form-control validate" required>
+              <p class="font-small blue-text d-flex justify-content-end">Forgot <a href="forgotpassword.php" class="blue-text ml-1">
                   Password?</a></p>
             </div>
 
             <div class="text-center mb-3">
-
-              <input type="submit" name="btn" class="btn btn-primary" value="Admin Login"><a href="dashboard.php" class="p-3"><span class="text-white">
-                  <input type="submit" name="btn" class="btn btn-primary" value="Student Login"><a href="profilepage.php" class="p-3"></a></span>
-
-
-
+              <input type="submit" name="btn" class="btn align-middle btn-primary" value="Login"><a href="dashboard.php" class="p-3"></a>
             </div>
+
 
             <div class="modal-footer mx-5 pt-3 mb-1">
               <p style="color: black">Not a member? SignUp As a</p>

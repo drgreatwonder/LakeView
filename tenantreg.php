@@ -56,8 +56,8 @@
             <input type="email" class="form-control" name="email" placeholder="Enter email" required/>
           </div>
           <div class="col-md-6 col-sm-12">
-            <label>Confirm Email address</label>
-            <input type="email" class="form-control" name="email1" placeholder="Enter email" required/>
+            <label>Phone Number</label>
+            <input type="email" class="form-control" name="email1" placeholder="Enter Phone Number" required/>
           </div>
         </div>
 

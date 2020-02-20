@@ -42,11 +42,11 @@
             <div class="row mb-4">
               <div class="col-md-6 col-sm-12">
                 <label>Email address</label>
-                <input type="email" class="form-control" name="email" placeholder="Enter email" required/>
+                <input type="email" class="form-control" name="email" placeholder="Enter Email" required/>
               </div>
               <div class="col-md-6 col-sm-12">
-                <label>Confirm Email address</label>
-                <input type="email" class="form-control" name="email1" placeholder="Enter email" required/>
+                <label>Phone Number</label>
+                <input type="email" class="form-control" name="email1" placeholder="Enter Phone Number" required/>
               </div>
             </div>
 

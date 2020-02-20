@@ -36,7 +36,7 @@
     .sidenav a {font-size: 18px;}
   }
 
-  img {
+  .profilepix {
     border-radius: 50%;
   }
 
@@ -54,4 +54,17 @@
   /* Add some padding inside the card container */
   .container {
     padding: 2px 16px;
+  }
+
+  #housepix {
+    border-radius: unset !important;
+  }
+
+  .personalinfo {
+    padding: 3%;
+  }
+
+  .propertyinfo {
+
+    padding: 3%;
   }

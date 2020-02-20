@@ -19,13 +19,27 @@
   
   <!-- Page content -->
   <div class="main">
-    <img src="asset/images/in.jpg" alt="Avatar">
+    <img src="asset/images/in.jpg" alt="Avatar" class="profilepix">
 
   <div class="card">
   <!-- <img src="img_avatar.png" alt="Avatar" style="width:100%"> -->
-  <div class="container">
-    <h4><b>John Doe</b></h4>
-    <p>Architect & Engineer</p>
+  <div class="container personalinfo">
+    <h4>Personal Info</h4>
+    <p><b>Name: </b> John Doe</p>
+    <p><b>Username: </b> John Doe</p>
+    <p><b>Email: </b> John Doe</p>
+    <p><b>DOB: </b> John Doe</p>
+    <p><b>Phone Number: </b> John Doe</p>
+    <p><b>About Me: </b> John Doe</p>
+  </div>
+
+  <div class="container propertyinfo">
+    <h4>Property Info</h4>
+    <img src="asset/images/in.jpg" alt="Avatar" id="housepix">
+  <p><b>Property Name: </b> John Doe</p>
+    <p><b>Address: </b> John Doe</p>
+    <p><b>Year Built: </b> John Doe</p>
+    <p><b>Property Type: </b> John Doe</p>
   </div>
   </div>
 </div>

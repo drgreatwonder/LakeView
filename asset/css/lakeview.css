@@ -47,7 +47,7 @@ body{
 }
 
 .contain .card:hover .face.face1{
-  background: #6099F6;
+  background: #17A2B8;
   transform: translateY(0);
 }
 
@@ -109,6 +109,13 @@ body{
 }
 
 
+.up {
+
+  min-width: auto !important;
+  border: none !important;
+}
+
+
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
   background-color: transparent;
@@ -150,7 +157,7 @@ body{
 
 /* Style the back side */
 .flip-card-back {
-  background-color: #6099F6;
+  background-color: #17A2B8;
   color: white;
   transform: rotateY(180deg);
 }

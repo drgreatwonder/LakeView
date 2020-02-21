@@ -76,7 +76,7 @@
 
   </div>
 
-  <h1 style="text-align: center;" class="mt-5  pt-5">MEET THE EXECUTIVES</h1>
+  <h1 style="text-align: center;" class="mt-5  pt-5" id="about">MEET THE EXECUTIVES</h1>
   <div class="container contain mt-3">
     <div class="flip-card">
       <div class="flip-card-inner">

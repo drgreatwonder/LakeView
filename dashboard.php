@@ -12,7 +12,7 @@
   
     <a href="index.php">Home</a>
     <a href="#">Payments</a>
-    <a href="#">Properties</a>
+    <a href="#">Property Registration</a>
     <a href="visitorsreg.php">Visitors Registration</a>
     <a href="#">Events</a>
   </div>

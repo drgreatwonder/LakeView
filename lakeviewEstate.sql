@@ -30,14 +30,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `lakeviewEstate`.`role` (
   `role_id` INT NOT NULL AUTO_INCREMENT,
   `rolename` VARCHAR(45) NOT NULL,
-  `user_role_id` INT NOT NULL,
-  PRIMARY KEY (`role_id`),
-  INDEX `user_role_id_idx` (`user_role_id` ASC),
-  CONSTRAINT `user_role_id`
-    FOREIGN KEY (`user_role_id`)
-    REFERENCES `lakeviewEstate`.`users` (`user_id`)
-    ON DELETE RESTRICT
-    ON UPDATE CASCADE)
+  PRIMARY KEY (`role_id`))
 ENGINE = InnoDB;
 
 
@@ -48,6 +41,7 @@ CREATE TABLE IF NOT EXISTS `lakeviewEstate`.`users` (
   `user_id` INT NOT NULL AUTO_INCREMENT,
   `firstname` VARCHAR(45) NOT NULL,
   `lastname` VARCHAR(45) NOT NULL,
+  `username` VARCHAR(45) NOT NULL,
   `gender` ENUM('M', 'F') NOT NULL,
   `dob` DATETIME NOT NULL,
   `phonenumber` VARCHAR(45) NOT NULL,

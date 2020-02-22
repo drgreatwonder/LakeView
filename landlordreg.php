@@ -46,7 +46,7 @@
               </div>
               <div class="col-md-6 col-sm-12">
                 <label>Phone Number</label>
-                <input type="email" class="form-control" name="email1" placeholder="Enter Phone Number" required/>
+                <input type="email" class="form-control" name="phonenumber" placeholder="Enter Phone Number" required/>
               </div>
             </div>
 
@@ -54,11 +54,11 @@
             <div class="row mb-4">
               <div class="col-md-6 col-sm-12">
                 <label>Password</label>
-                <input type="password" class="form-control" name="password" placeholder="Password" required/>
+                <input type="password" class="form-control" name="password1" placeholder="Password" required/>
               </div>
               <div class="col-md-6 col-sm-12">
                 <label>Confirm Password</label>
-                <input type="password" class="form-control" name="password1" placeholder="Confirm Password" required/>
+                <input type="password" class="form-control" name="password" placeholder="Confirm Password" required/>
               </div>
             </div>
 
@@ -73,7 +73,7 @@
                 </select>
                 <div class="form-group mt-3">
                   <label>Upload Profile Picture</label>
-                  <input type="file" class="form-control-file" name="profile_pix">
+                  <input type="file" class="form-control-file" name="profilepix">
                 </div>
               </div>
 
@@ -82,7 +82,7 @@
               <div class="col-md-6 col-sm-12">
                 <label>About Me</label>
                 <div class="form-group">
-                  <textarea class="form-control rounded-0" name="bio" rows="5" placeholder="" required></textarea>
+                  <textarea class="form-control rounded-0" name="aboutme" rows="5" placeholder="" required></textarea>
                 </div>
               </div>
             </div>
@@ -102,23 +102,28 @@
             <div class="col-md-6 col-sm-12">
 
             <div class="mb-4">
-              <label>Property Name</label>
-              <input type="text" class="form-control" name="propertyname" placeholder="Enter Property Name" required/>
+              <label>Property Number</label>
+              <input type="text" class="form-control" name="housenumber" placeholder="Enter Property Name" required/>
               </div>
 
               <div class="mb-4">
-              <label>Address</label>
-              <input type="text" class="form-control" name="lastname" placeholder="Enter Address" required/>
+              <label>Street</label>
+              <input type="text" class="form-control" name="street_name" placeholder="Enter Address" required/>
             </div>
+
+              <!-- <div class="mb-4">
+              <label>Address</label>
+              <input type="text" class="form-control" name="street_name" placeholder="Enter Address" required/>
+            </div> -->
 
             <div class="mb-4">
               <label>Year Built</label>
-              <input type="date" class="form-control" name="dob" required/>
+              <input type="date" class="form-control" name="buildyear" required/>
             </div>
 
             <div class="mb-4">
                 <label>Property Type</label>
-              <select class="form-control" name="most_preferred_language" required>
+              <select class="form-control" name="housetype" required>
                 <option>Take your pick</option>
                 <option>Personal</option>
                 <option>Commercial</option>
@@ -127,7 +132,7 @@
             </div>
 
               <label>Upload Profile Picture</label>
-                <input type="file" class="form-control-file" name="profile_pix">
+                <input type="file" class="form-control-file" name="housepix">
 
           </div>
 

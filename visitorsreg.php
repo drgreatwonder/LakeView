@@ -37,7 +37,7 @@
               </div>
               <div class="col-md-6 col-sm-12">
                 <label>Phone Number</label>
-                <input type="email" class="form-control" name="email1" placeholder="Enter Phone Number" required/>
+                <input type="email" class="form-control" name="phonenumber" placeholder="Enter Phone Number" required/>
               </div>
             </div>
       
@@ -56,12 +56,12 @@
 
               <div class="col-md-6 col-sm-12">
                 <label>Host</label>
-                <input type="email" class="form-control" name="email1" placeholder="Enter Your Full Name" required/>
+                <input type="email" class="form-control" name="host" placeholder="Enter Your Full Name" required/>
               </div>
             </div>
       
 
-            <button type="submit" class="btn btn-primary text-secondary" name="getstarted" onclick="showLoginModal()">Submit</button>
+            <button type="submit" class="btn btn-primary text-secondary" name="submitVisitorsReg" onclick="showLoginModal()">Submit</button>
           </fieldset>
 
          

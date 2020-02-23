@@ -23,12 +23,12 @@
 
   <div class="mb-4">
   <label>Payment Date</label>
-  <input type="date" class="form-control" name="payment_date" required/>
+  <input type="date" class="form-control" name="payment_date"/>*
   </div>
 
 <div class="mb-4">
 <label>Amount</label>
-<input type="text" class="form-control" name="amount" placeholder="Enter Property Name" required/>
+<input type="text" class="form-control" name="amount" placeholder="Enter Property Name"/>*
 </div>
 
 
@@ -56,7 +56,7 @@
 </div>
 
 
-<button type="submit" class="btn btn-primary text-secondary mt-5" name="getstarted" onclick="showLoginModal()">Submit</button>
+<button type="submit" class="btn btn-primary text-secondary mt-5" name="securitydues" onclick="showLoginModal()">Submit</button>
 
 </form>
 

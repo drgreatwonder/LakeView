@@ -1,113 +1,93 @@
 <?php
 include "dbconnection.php";
-// $firstnameError = " ";
-// $lastnameError = " ";
-// $emailError = "";
-// $phonenumberError = "";
-// $genderError = "";
-// $hostError = "";
 
 //set the variables to empty
-$firstnameError = $lastnameError = $emailError = $phonenumberError = $genderError = $hostError = "";
- 
+$firstnameError = " ";
+$lastnameError = " ";
+$username = "";
+$dob = "";
+$emailError = "";
+$phonenumberError = "";
+$password1 = "";
+$password = "";
+$genderError = "";
+$profilepix = "";
+$aboutme = "";
 
     session_start();
 
-if (isset ($_POST["submitvisitorsreg"])) {
-    if (empty($_POST["firstname"])) {
+if (isset($_POST["submittenantreg"]))
+{
+    
+    $firstname = $_POST['firstname'];
+    $lastname = $_POST['lastname'];
+    $username = $_POST['username'];
+    $dob = $_POST['dob'];
+    $email = $_POST['email'];
+    $phonenumber = $_POST['phonenumber'];
+    $password = $_POST['password'];
+    $firstname = $_POST['firstname'];
+    $gender = $_POST['gender'];
+    // $profilepix = $_POST['profilepix'];
+    $address = $_POST['address'];
+    $aboutme = $_POST['aboutme'];
 
-        $firstnameError="This Field is Required";
+    $duplicate = mysqli_query($conn, "SELECT * from users where email = '$email'");
 
+    if (mysqli_num_rows($duplicate)>0) {
+        echo json_encode(array("statusCode"=>201));
     } else {
+      
+        $sql = "INSERT INTO `users` (`firstname`, `lastname`, `username`, `dob`, `email`, `phonenumber`, `password`, `gender`, `aboutme`, `profilepix`, `address`) VALUES ('$firstname', '$lastname', '$username', '$dob', '$email', '$phonenumber', '$password', '$gender', '$aboutme', 'NULLVAL', '$address')";
 
-        $firstname=Check_User_Input($_POST["firstname"]);
-        if(!preg_match("/^[A-Za-z. ]*$/", $firstname)) {
+        if (mysqli_query($conn, $sql))
+        {
+            echo json_encode(array("statusCode"=>200));
+        } else
+        {
 
-            $firstnameError="Only letters and whitespace allowed";
+            echo json_encode(array("statusCode"=>201));
         }
     }
+    
 
 
+    // if(isset($_POST['loginbtn'])) {
 
-    if (empty($_POST["lastname"])) {
+    //     $username = $_POST['username'];
+    //     $password = $_POST['password'];
+    //     $check = mysqli_query($conn, "select * from user where username='$username' and password='$password'");
+    //     var_dump($check);
+    //     if (mysqli_num_rows($check)>0) {
 
-        $lastnameError="This Field is Required";
+    //         $_SESSION['username'] = $username;
+    //         echo json_encode(array("statusCode"=>200));
 
-    } else {
+    //     } else {
 
-        $lastname=Check_User_Input($_POST["lastname"]);
-        if(!preg_match("/^[A-Za-z. ]*$/", $lastname)) {
+    //         echo json_encode(array("statusCode"=>201));
+    //     }
 
-            $lastnameError="Only letters and whitespace allowed";
-        }
-    }
-
-
-
-    if (empty($_POST["email"])) {
-
-        $emailError="This Field is Required";
-
-    } else {
-
-        $email=Check_User_Input($_POST["email"]);
-
-        if(!preg_match("/[a-zA-Z0-9._-] {3,} @ [a-zA-Z0-9._-] {3,} [.] {1} [a-zA-Z0-9.\-_\/?\$=&\#\~`!]/", $email)) {
-
-            $email="This is not a valid email";
-        }
-    }
-
-
-    if (empty($_POST["phonenumber"])) {
-
-        $phonenumberError="This Field is Required";
-
-    } else {
-
-        $phonenumber=Check_User_Input($_POST["phonenumber"]);
-        if(!preg_match("/[0-9_+]/", $phonenumber)) {
-
-            $phonenumber="This is not a valid phone number";
-        }
-    }
-
-
-    if (empty($_POST["gender"])) {
-
-        $genderError="This Field is Required";
-
-    } else {
-
-        $gender=Check_User_Input($_POST["gender"]);
-    }
-
-
-
-
-    if (empty($_POST["host"])) {
-
-        $hostError="This Field is Required";
-
-    } else {
-
-        $host=Check_User_Input($_POST["host"]);
-        if(!preg_match("/^[A-Za-z. ]*$/", $host)) {
-
-            $hostError="Only letters and whitespace allowed";
-        }
-    }
-
-
-}
-
-function Check_User_Input ($info) {
-
-    return $info;
+        mysqli_close($conn);
 }
 
 
 
-/*
-Name: /^[A-Za-z. ]*$/
-Email: /[a-zA-Z0-9._-] {3,} @ [a-zA-Z0-9._-] {3,} [.] {1} [a-zA-Z0-9.\-_\/?\$=&\#\~`!]*/
+
+
+  //path were our avatar image will be stored
+//   $avatar_path = $mysqli->real_escape_string('images/'.$_FILES['avatar']['name']);
+        
+  //make sure the file type is image
+//   if (preg_match("!image!",$_FILES['avatar']['type'])) 
+//   {         
+      //copy image to images/ folder 
+//       if (copy($_FILES['avatar']['tmp_name'], $avatar_path)) 
+//       {
+
+//       }
+//   }
+
+
+
+

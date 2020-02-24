@@ -1,3 +1,4 @@
+<?php require "formValidation.php" ?>
 <?php require "header.php" ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,6 +13,10 @@
 
       <form name="tenantreg" action="tenantreg.php" method="post" enctype="multipart/form-data">
 
+      <?php 
+      // echo display_error(); 
+      ?>
+
         <fieldset  class="p-3 mt-5">
           <legend>Personal Information</legend>
       
@@ -23,29 +28,29 @@
 
           <div class="col-md-6 col-sm-12">
             <label>Last Name</label>
-            <input type="text" class="form-control" name="lastname" placeholder="Enter Last Name"/>*
+            <input type="text" class="form-control" name="lastname" placeholder="Enter Last Name"/>
           </div>
         </div>
 
         <div class="row mb-4">
           <div class="col-md-6 col-sm-12">
             <label>Username</label>
-            <input type="text" class="form-control" name="username" placeholder="Enter Preffered Username"/>*
+            <input type="text" class="form-control" name="username" placeholder="Enter Preffered Username" value="<?php echo $username; ?>"/>
           </div>
           <div class="col-md-6 col-sm-12">
             <label>Date Of Birth</label>
-            <input type="date" class="form-control" name="dob"/>*
+            <input type="date" class="form-control" name="dob"/>
           </div>
         </div>
 
         <div class="row mb-4">
           <div class="col-md-6 col-sm-12">
             <label>Email address</label>
-            <input type="email" class="form-control" name="email" placeholder="Enter email"/>*
+            <input type="email" class="form-control" name="email" placeholder="Enter email">
           </div>
           <div class="col-md-6 col-sm-12">
             <label>Phone Number</label>
-            <input type="email" class="form-control" name="phonenumber" placeholder="Enter Phone Number"/>*
+            <input type="text" class="form-control" name="phonenumber" placeholder="Enter Phone Number"/>*
           </div>
         </div>
 
@@ -70,12 +75,18 @@
               <option>Female</option>
               <option>Others</option>
             </select>*
+
+            
             <div class="form-group mt-3">
               <label>Upload Profile Picture</label>
               <input type="file" class="form-control-file" name="profilepix">
             </div>
           </div>
-
+          
+          <div class="col-md-6 col-sm-12">
+          <label>Address</label>
+          <input type="text" class="form-control" name="address" placeholder="Enter Your Address"/>*
+        </div>
 
 
           <div class="col-md-6 col-sm-12">

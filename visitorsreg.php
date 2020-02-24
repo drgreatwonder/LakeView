@@ -1,6 +1,6 @@
 <?php require "formValidation.php" ?>
 <?php require "header.php" ?>
-<?php require "dbconnection.php" ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,20 +16,21 @@
           <h1 class="text-center mb-3">REGISTER YOUR VISITOR</h1>
 
           <?php
-             if(!empty($_POST["firstname"])&&!empty($_POST["lastname"])&&!empty($_POST["email"])&&!empty($_POST["phonenumber"])&&!empty($_POST["gender"])&&!empty($_POST["host"])) {
+            //  if(!empty($_POST["firstname"])&&!empty($_POST["lastname"])&&!empty($_POST["email"])&&!empty($_POST["phonenumber"])&&!empty($_POST["gender"])&&!empty($_POST["host"])) {
 
               // if((preg_match("/^[A-Za-z. ]*$/", $firstname)==true)&&(preg_match("/^[A-Za-z. ]*$/", $lastname)==true)&&(preg_match("/^[A-Za-z. ]*$/", $email)==true)&&(preg_match("/^[A-Za-z. ]*$/", $phonenumber)==true)&&(preg_match("/^[A-Za-z. ]*$/", $gender)==true)&&(preg_match("/^[A-Za-z. ]*$/", $host)==true)) {
 
-              echo "{$_POST["firstname"]} <br>";
-              echo "{$_POST["lastname"]} <br>";
-              echo "{$_POST["email"]}<br>";
-              echo "{$_POST["phonenumber"]}<br>";
-              echo "{$_POST["gender"]}<br>";
-              echo "{$_POST["host"]}<br>";
-          } 
-          else{
-            echo "<span class='error'>Please Fill in Your Details</span>";
-          }
+              // echo "{$_POST["firstname"]} <br>";
+              // echo "{$_POST["lastname"]} <br>";
+              // echo "{$_POST["email"]}<br>";
+              // echo "{$_POST["phonenumber"]}<br>";
+              // echo "{$_POST["gender"]}<br>";
+              // echo "{$_POST["host"]}<br>";
+              
+          // } 
+          // else{
+          //   echo "<span class='error'>Please Fill in Your Details</span>";
+          // }
         // } 
        
           

@@ -1,4 +1,4 @@
-<?php require "header.php"?>
+<!-- <?php require "header.php"?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -109,14 +109,23 @@
               <div class="mb-4">
               <label>Street</label>
               <input type="text" class="form-control" name="street_name" placeholder="Enter Address"/>*
-            </div>
+            </div> -->
+
+
+
+
+
 
               <!-- <div class="mb-4">
               <label>Address</label>
               <input type="text" class="form-control" name="street_name" placeholder="Enter Address" required/>
             </div> -->
 
-            <div class="mb-4">
+
+
+
+
+            <!-- <div class="mb-4">
               <label>Year Built</label>
               <input type="date" class="form-control" name="buildyear"/>*
             </div>
@@ -143,4 +152,4 @@
     
           </form>
   </body>
-</html>
+</html> -->

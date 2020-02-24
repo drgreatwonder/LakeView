@@ -11,7 +11,7 @@
 <div class="sidenav">
   
     <a href="index.php">Home</a>
-    <a href="#">Payments</a>
+    <a href="securitydues.php">Payments</a>
     <a href="#">Property Registration</a>
     <a href="visitorsreg.php">Visitors Registration</a>
     <a href="#">Events</a>

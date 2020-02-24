@@ -223,3 +223,11 @@ body{
   padding:7%;
   
 }
+
+/* input[type="text"], input[type="radio"], textarea {
+
+} */
+
+.error {
+  color: red;
+}

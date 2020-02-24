@@ -194,7 +194,7 @@
             </div>
 
             <div class="text-center mb-3">
-              <input type="submit" name="btn" class="btn align-middle btn-primary" value="Login"><a href="dashboard.php" class="p-3"></a>
+              <input type="submit" name="loginbtn" class="btn align-middle btn-primary" value="Login"><a href="dashboard.php" class="p-3"></a>
             </div>
 
 

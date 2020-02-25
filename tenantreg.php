@@ -1,5 +1,11 @@
-<?php require "dbconnection1.php" ?>
-<?php require "header.php" ?>
+<?php
+// require "dbconnection1.php";
+require "header.php";
+require "tenantregconfig.php";
+// require "formValidation.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -87,21 +93,41 @@
           <label>Address</label><span class="error">*</span>
           <input type="text" class="form-control" name="address" placeholder="Enter Your Address" id="address"/><span class="error" id="addresserror"></span>
         </div>
-
+        
 
           <div class="col-md-6 col-sm-12">
             <label>About Me</label>
             <div class="form-group">
               <textarea class="form-control rounded-0" name="aboutme" rows="5" placeholder="" id=""></textarea>
             </div>
+          
           </div>
+          <!-- <div class="col-md-6 col-sm-12">
+            <label>Status</label><span class="error">*</span>
+            <select class="form-control" name="role" id="userstatus">
+              <option>Select</option>
+              <option>User</option>
+              <option>Admin</option>
+              <option>Secretary</option>
+            </select>
+            <span class="error" id="gendererror"></span>
+            
+        </div> -->
+        </div>
+ 
+        <button type="submit" class="btn btn-primary text-secondary mt-4" name="submittenantreg">Submit</button>
+
+        <div class="col-md-6 col-sm-12">
+          <input type="hidden" class="form-control" name="userstatus" value="Inactive" placeholder="User Status" id="userstatus"/>
         </div>
 
-        <button type="submit" class="btn btn-primary text-secondary mt-4" name="submittenantreg">Submit</button>
+        <!-- <input type="button"class="btn btn-primary text-secondary mt-4" name="submittenantreg" value="submit"> -->
+<!--         
+        <input type="submit" name="submittenantreg" class="btn align-middle btn-primary" value="submit"><a href="dashboard.php" class="p-3"></a> -->
+
       </fieldset>
       </form>
-
-    <script src="lakeviewValidation.js"></script>
+    <!-- <script src="lakeviewValidation.js"></script> -->
 </body>
 
 </html>

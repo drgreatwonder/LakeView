@@ -21,7 +21,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-        <ul class="navbar-nav ml-auto smooth-scroll">
+        <ul class="navbar-nav ml-3 smooth-scroll">
           <li class="nav-item">
             <a class="nav-link mr-3 text-info" href="index.php">Home
               <span class="sr-only">(current)</span>

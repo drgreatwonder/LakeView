@@ -1,39 +1,45 @@
-<?php 
-//session_start();
-$servername = "localhost";
-$dbname = "root";
-$password = "";
-$db = "lakeviewEstate";
-// $errors = array();
+<?php
+
+require "dbconnection1.php";
+
+//receive the values from the form
+if (isset($_POST['submittenantreg'])){
+   $firstname = $_POST['firstname'];
+   $lastname = $_POST['lastname'];
+   $username = $_POST['username'];
+   $dob = $_POST['dob'];
+   $email = $_POST['email'];
+   $phonenumber = $_POST['phonenumber'];
+   $password = $_POST['password'];
+   $gender = $_POST['gender'];
+   $aboutme = $_POST['aboutme'];
+   $uploadfile = $_FILES["profilepix"]["tmp_name"];
+   $target = "asset/images".basename ($_FILES ['profilepix']['name']);
+   $profilepix = $_FILES['profilepix']['name'];
+   move_uploaded_file( $uploadfile , $target );
+  //  $address = $_POST['address'];
+   $address = 54657;
+   $userstatus = $_POST['userstatus'];
+  //  $role = $_POST['role'];
+   $role = 3;
+ 
+   //insert the values into the database
+ $query = "INSERT INTO `users`(`firstname`, `lastname`, `username`, `dob`, `email`, `phonenumber`, `password`, `gender`, `aboutme`, `profilepix`, `role`, `userstatus`) VALUES ('$firstname', '$lastname', '$username', '$dob', '$email', '$phonenumber', '$password', '$gender', '$aboutme', '$profilepix', '$role', '$userstatus')";
 
 
-//create connection for procedural
-$conn = mysqli_connect($servername, $dbname, $password, $db);
-// mysqli_select_db($conn, $db) or ("could not select from dbase");
+ //performs query against the database
+ if (mysqli_query($conn, $query)){
+   echo "<font color=#fff'>You Have successfully Signed Up Kindly <a href='dashboard.php'>Sign In</a> To Continue</font>";
 
-if(!$conn) {
-    die("Failed to Connect: " . mysqli_connect_error());
+ }
+ else{
+   echo "<font color='#660000'>Error!!! NOT REGISTERED</font> " . mysqli_error($conn);
+ }
 }
-echo "Connected successfully";
+mysqli_close($conn);
 
 
-
-
-
-//check connection for object_oriented below
-//$conn = new mysqli($servername, $username, $password, $db);
-
-//check connection (not a must but wise)
-/*if ($conn->connect_error) {
-
-    die("Not Connected: ". $conn->connect_error);
-}
-
-echo "Connection Successful";
-*/
-
-
-// REGISTER USER
+//REGISTER USER
 // if (isset($_POST['submittenantreg'])) {
  
   // receive all input values from the form
@@ -48,6 +54,8 @@ echo "Connection Successful";
   // $aboutme = mysqli_real_escape_string($conn, $_POST['aboutme']);
   // $profilepix = mysqli_real_escape_string($conn, $_POST['profilepix']);
   // $address = mysqli_real_escape_string($conn, $_POST['address']);
+
+
 
   // form validation: ensure that the form is correctly filled ...
   // by adding (array_push()) corresponding error unto $errors array
@@ -196,5 +204,4 @@ echo "Connection Successful";
 //   	}
 //   }
 // }
-
 ?>

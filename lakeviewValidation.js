@@ -1,84 +1,83 @@
 const element = document.querySelector('form');
 function signupvalidation(e) {
   e.preventDefault(); 
-var firstname = document.getElementById('firstname').value;
-var lastname = document.getElementById('lastname').value;
-var username = document.getElementById('username').value;
-var dob = document.getElementById('dob').value;
-var email = document.getElementById('email').value;
-var phonenumber = document.getElementById('phonenumber').value;
-var initialpassword = document.getElementById('initialpassword').value;
-var password = document.getElementById('password').value;
-var gender = document.getElementById('gender').value;
-console.log(gender)
-var address = document.getElementById('address').value;
+var fname = document.getElementById('firstname').value;
+var lname = document.getElementById('lastname').value;
+var uname = document.getElementById('username').value;
+var dofb = document.getElementById('dob').value;
+var emailvar = document.getElementById('email').value;
+var phone_number = document.getElementById('phonenumber').value;
+var initial_password = document.getElementById('initialpassword').value;
+var secondpassword = document.getElementById('password').value;
+var malefemale = document.getElementById('gender').value;
+var homeaddress = document.getElementById('address').value;
 
 
-var firstnameRegex = /^[a-zA-Z ]*$/;
-var lastnameRegex =/^[a-zA-Z ]*$/;
-var usernameRegex = /^[a-zA-Z ]*$/;
-var emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
-var phonenumberRegex = /^[0-9]{3}-[0-9]{4}-[0-9]{4}$/;
-var addressRegex = /^\d{1,5}\s\w.\s(\b\w*\b\s){1,2}\w*\./;
+var fnameRegex = /^[a-zA-Z ]*$/;
+var lnameRegex =/^[a-zA-Z ]*$/;
+var unameRegex = /^[a-zA-Z ]*$/;
+var emailvarRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+// var phonenumberRegex = /^[0-9]{3}-[0-9]{4}-[0-9]{4}$/;
+// var addressRegex = /^\d{1,5}\s\w.\s(\b\w*\b\s){1,2}\w*\./;
 
 
 // var valid = true;
   //alert(firstname);
-if (firstname == "") {
+if (fname == "") {
 
 //   valid = false;
   document.getElementById('firstnameerror').innerHTML = "First name is required.";
   //return false;
 }else {
-      if (!firstnameRegex.test(firstname)) {
+      if (!fnameRegex.test(fname)) {
           valid = false;
           document.getElementById('firstnameerror').innerHTML = "Invalid name format.";
       }
 }
 
-if (lastname == "") {
+if (lname == "") {
 
 // valid = false;
 document.getElementById('lastnameerror').innerHTML = "Last name is required.";
 //return false;
 }else {
-    if (!lastnameRegex.test(lastname)) {
+    if (!lnameRegex.test(lname)) {
         valid = false;
         document.getElementById('lastnameerror').innerHTML = "Invalid name format.";
     }
 }
 
-if (username == "") {
+if (uname == "") {
 
 // valid = false;
 document.getElementById('usernameerror').innerHTML = "User name is required.";
 //return false;
 }else {
-    if (!usernameRegex.test(username)) {
+    if (!unameRegex.test(uname)) {
         valid = false;
         document.getElementById('usernameerror').innerHTML = "Invalid name format.";
     }
 }
 
-if (dob == "") {
+if (dofb == "") {
 
 // valid = false;
 document.getElementById('doberror').innerHTML = "Date of Birth is required.";
 // return false;
 }
 
-if (gender == "Select") {
+if (malefemale == "Select") {
 
 // valid = false;
 document.getElementById('gendererror').innerHTML = "Gender is required.";
 // return false;
 }
 
-if (email == "") {
+if (emailvar == "") {
 //   valid = false;
   document.getElementById('emailerror').innerHTML = "Email is required.";
 } else {
-  if (!emailRegex.test(email)) {
+  if (!emailvarRegex.test(email)) {
     //   valid = false;
       document.getElementById('emailerror').innerHTML = "Invalid email format.";
      // return false;
@@ -86,43 +85,36 @@ if (email == "") {
 }
 
 
-if (phonenumber == "") {
-//   valid = false;
-  document.getElementById('phonenumbererror').innerHTML = "Phone Number is required.";
-} else {
-  if (!phonenumberRegex.test(phonenumber)) {
-    //   valid = false;
-      document.getElementById('phonenumbererror').innerHTML = "Invalid phone number format.";
-    //  return false;
-  }
-}
+if (phone_number == "") {
+
+    // valid = false;
+    document.getElementById('phonenumbererror').innerHTML = "Phone number is required.";
+    // console.log(phonenumber)
+    // return false;
+    }
 
 
-if (initialpassword == "") {
+if (initial_password == "") {
 // valid = false;
 document.getElementById('initialpassworderror').innerHTML = "Password is required.";
 }
-if (password == "") {
+if (secondpassword == "") {
 // valid = false;
 document.getElementById('passworderror').innerHTML = "Password is required.";
 }
 
-if (initialpassword != password) {
+if (initial_password != secondpassword) {
 // valid = false;
 document.getElementById('passworderror').innerHTML = "Both passwords must be same.";
 }
 
 
-if (address == "") {
+if (homeaddress == "") {
+
     // valid = false;
     document.getElementById('addresserror').innerHTML = "Address is required.";
-} else {
-    if (!addressRegex.test(address)) {
-        // valid = false;
-        document.getElementById('addresserror').innerHTML = "Invalid address format.";
-      //  return false;
+    // return false;
     }
-}
 
 //return valid;
 }

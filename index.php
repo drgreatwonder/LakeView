@@ -1,4 +1,17 @@
+<?php session_start(); ?> 
 <?php require "header.php" ?>
+<?php 
+
+  // if (!isset($_SESSION['username'])) {
+  // 	$_SESSION['msg'] = "You must log in first";
+  // 	header('location: index.php');
+  // }
+  // if (isset($_GET['logout'])) {
+  // 	session_destroy();
+  // 	unset($_SESSION['username']);
+  // 	header("location: index.php");
+  // }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -150,6 +163,7 @@
         <button class="btn btn-info ml-auto" type="submit">Send</button>
       </fieldset>
     </form>
+    
   </div>
 
 
@@ -180,21 +194,21 @@
         <!--Body-->
         <div class="modal-body mx-4">
           <!--Body-->
-          <form method="post" enctype="multipart/form-data">
+          <form method="post" action="login.php" enctype="multipart/form-data">
             <div class="md-form mb-3 pb-3">
-            <label data-error="wrong" data-success="right" for="Form-email1">Your Username</label>
+            <label data-error="wrong" data-success="right" for="Form-email1">Username</label>
               <input type="text" id="" name="username" class="form-control validate" required>
             </div>
 
             <div class="md-form pb-3">
-              <label data-error="wrong" data-success="right" for="Form-pass1">Your password</label>
+              <label data-error="wrong" data-success="right" for="Form-pass1">password</label>
               <input type="password" id="" name="password" class="form-control validate" required>
               <p class="font-small blue-text d-flex justify-content-end">Forgot <a href="forgotpassword.php" class="blue-text ml-1">
                   Password?</a></p>
             </div>
 
             <div class="text-center mb-3">
-              <input type="submit" name="loginbtn" class="btn align-middle btn-primary" value="Login"><a href="dashboard.php" class="p-3"></a>
+              <input type="submit" name="loginbtn" class="btn align-middle btn-primary" value="Login">
             </div>
 
 
@@ -203,6 +217,7 @@
             
                 <a href="landlordreg.php">Landlord</a> or <a href="tenantreg.php">Tenant</a>
             </div>
+            <?php require "login.php" ?>
 </div>
 
 

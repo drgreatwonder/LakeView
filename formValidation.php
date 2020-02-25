@@ -75,7 +75,7 @@ if (isset($_POST['signup'])) {
     }
     
 
-$target_dir = "uploads/";
+$target_dir = "uploadsuyuiiudfjjkhujy5hbjkljdebgvrkjjkbvjkfbjvbkjfbjfrvjuykoytotttttttttt/";
 $target_file = $target_dir . basename($_FILES["profilepix"]["name"]);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));

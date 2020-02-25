@@ -7,7 +7,7 @@
   <div class="">
   <div id="carouselExampleSlidesOnly" class="carousel slide mb-5" data-ride="carousel">
     <div class="carousel-inner">
-      <div class="carousel-item active h-75">
+      <div class="carousel-item active h-75 w-100">
         <video class="video-fluid z-depth-1 video" autoplay loop muted>
           <source src="https://mdbootstrap.com/img/video/Sail-Away.mp4" type="video/mp4" />
         </video>

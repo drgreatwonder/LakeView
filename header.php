@@ -16,14 +16,14 @@
 </head>
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
     <div class="container">
-      <a class="navbar-brand text-info" href="index.php">LakeView</a>
+      <a class="navbar-brand text-info ml-auto" href="index.php">LakeView</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav ml-auto smooth-scroll">
           <li class="nav-item">
-            <a class="nav-link mr-5 text-info" href="index.php">Home
+            <a class="nav-link mr-3 text-info" href="index.php">Home
               <span class="sr-only">(current)</span>
             </a>
           </li>

@@ -2,6 +2,7 @@
 // require "dbconnection1.php";
 require "header.php";
 require "tenantregconfig.php";
+require "session.php";
 // require "formValidation.php";
 
 ?>
@@ -17,7 +18,7 @@ require "tenantregconfig.php";
       
       <h1 class="text-center mb-3">REGISTER</h1>
 
-      <form name="tenantreg" action="tenantreg.php" method="post"  enctype="multipart/form-data">
+      <form name="tenantreg" name= "tenantreg" id="my_form_id" action="tenantreg.php" method="post"  enctype="multipart/form-data">
 
       <?php 
       // echo display_error(); 
@@ -29,34 +30,46 @@ require "tenantregconfig.php";
         <div class="row mb-4">
           <div class="col-md-6 col-sm-12">
             <label>First Name</label><span class="error">*</span>
-            <input type="text" class="form-control" name="firstname" placeholder="Enter First Name" id="firstname"/><span class="error" id="firstnameerror"></span>
+            <input type="text" class="form-control" name="firstname" placeholder="Enter First Name" id="firstname"/><span class="error" id="firstnameerror"><?php 
+                 echo $fnerror
+                ?></span>
           </div>
 
           <div class="col-md-6 col-sm-12">
             <label>Last Name</label><span class="error">*</span>
-            <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Enter Last Name"/><span class="error" id="lastnameerror"></span>
+            <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Enter Last Name"/><span class="error" id="lastnameerror"><?php 
+                 echo $lnerror
+                ?></span>
           </div>
         </div>
 
         <div class="row mb-4">
           <div class="col-md-6 col-sm-12">
             <label>Username</label><span class="error">*</span>
-            <input type="text" class="form-control" name="username" placeholder="Enter Preffered Username" value="" id="username"/><span class="error" id="usernameerror"></span>
+            <input type="text" class="form-control" name="username" placeholder="Enter Preffered Username" value="" id="username"/><span class="error" id="usernameerror"><?php 
+                echo $unerror
+                ?></span>
           </div>
           <div class="col-md-6 col-sm-12">
             <label>Date Of Birth</label><span class="error">*</span>
-            <input type="date" class="form-control" name="dob" id="dob" min="1920-01-01" max="2020-02-25"/><span class="error" id="doberror"></span>
+            <input type="date" class="form-control" name="dob" id="dob" min="1920-01-01" max="2020-02-25"/><span class="error" id="doberror"><?php 
+                 echo $doberror
+                ?></span>
           </div>
         </div>
 
         <div class="row mb-4">
           <div class="col-md-6 col-sm-12">
             <label>Email address</label><span class="error">*</span>
-            <input type="text" class="form-control" name="email" placeholder="Enter email" id="email"><span class="error" id="emailerror"></span>
+            <input type="text" class="form-control" name="email" placeholder="Enter email" id="email"><span class="error" id="emailerror"><?php 
+                 echo $emailerror
+                ?></span>
           </div>
           <div class="col-md-6 col-sm-12">
             <label>Phone Number</label><span class="error">*</span>
-            <input type="text" class="form-control" name="phonenumber" id="phonenumber" placeholder="Enter Phone Number"/><span class="error" id="phonenumbererror"></span>
+            <input type="text" class="form-control" name="phonenumber" id="phonenumber" placeholder="Enter Phone Number"/><span class="error" id="phonenumbererror"><?php 
+                 echo $phonenumbererror
+                ?></span>
           </div>
         </div>
 
@@ -64,11 +77,15 @@ require "tenantregconfig.php";
         <div class="row mb-4">
           <div class="col-md-6 col-sm-12">
             <label>Password</label><span class="error">*</span>
-            <input type="password" class="form-control" name="initialpassword" placeholder="Password" id="initialpassword"/><span class="error" id="initialpassworderror"></span>
+            <input type="password" class="form-control" name="initialpassword" placeholder="Password" id="initialpassword"/><span class="error" id="initialpassworderror"><?php 
+                 echo $initialpassworderror
+                ?></span>
           </div>
           <div class="col-md-6 col-sm-12">
             <label>Confirm Password</label><span class="error">*</span>
-            <input type="password" class="form-control" name="password" id="password" placeholder="Confirm Password"/><span class="error" id="passworderror"></span>
+            <input type="password" class="form-control" name="password" id="password" placeholder="Confirm Password"/><span class="error" id="passworderror"><?php 
+                 echo $passworderror
+                ?></span>
           </div>
         </div>
 
@@ -81,17 +98,23 @@ require "tenantregconfig.php";
               <option>Female</option>
               <option>Others</option>
             </select>
-            <span class="error" id="gendererror"></span>
+            <span class="error" id="gendererror"><?php 
+                 echo $gendererror
+                ?></span>
             
             <div class="form-group mt-3">
               <label>Upload Profile Picture</label>
-              <input type="file" class="form-control-file" name="profilepix">
+              <input type="file" class="form-control-file" name="profilepix"><span class="error"><?php 
+               echo $profilepixerror
+                ?></span>
             </div>
           </div>
           
           <div class="col-md-6 col-sm-12">
           <label>Address</label><span class="error">*</span>
-          <input type="text" class="form-control" name="address" placeholder="Enter Your Address" id="address"/><span class="error" id="addresserror"></span>
+          <input type="text" class="form-control" name="address" placeholder="Enter Your Address" id="address"/><span class="error" id="addresserror"><?php 
+               echo $addresserror
+                ?></span>
         </div>
         
 
@@ -127,7 +150,35 @@ require "tenantregconfig.php";
 
       </fieldset>
       </form>
-    <!-- <script src="lakeviewValidation.js"></script> -->
+
+      <!-- <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    
+    <script>
+
+      $(function () {
+
+        $('form').on('submit', function (e) {
+
+          e.preventDefault();
+
+          $.ajax({
+            type: 'post',
+            url: 'index.php',
+            data: $('form').serialize(),
+            success: function () {
+              console.log("Successful registration");
+              
+             <?php // echo "successful registration"; ?>
+            }
+          });
+
+        });
+
+      });
+
+            
+        </script> -->
+    <script src="lakeviewValidation.js"></script>
 </body>
 
 </html>

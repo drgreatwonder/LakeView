@@ -16,7 +16,7 @@
 </head>
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
     <div class="container">
-      <a class="navbar-brand text-info ml-auto" href="index.php">LakeView</a>
+      <a class="navbar-brand text-info ml-auto" href="#">LakeView</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -40,7 +40,7 @@
             <a class="nav-link" href="#opinions" data-offset="30">Login</a>
           </li> -->
           <li class="nav-item">
-                  <a class="nav-link mr-5 text-info" href="dashboard.php" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#elegantModalForm" id="modal">Login</a>
+                  <a class="nav-link mr-5 text-info" href="#" class="btn btn-default btn-rounded" data-toggle="modal" data-target="#elegantModalForm" id="modal">Login</a>
           </li>
           <li class="nav-item mr-5">
             <a class="nav-link text-info" href="dashboard.php" data-offset="90">Dashboard</a>

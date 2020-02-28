@@ -75,7 +75,7 @@ if (isset($_POST['signup'])) {
     }
     
 
-$target_dir = "uploadsuyuiiudfjjkhujy5hbjkljdebgvrkjjkbvjkfbjvbkjfbjfrvjuykoytotttttttttt/";
+$target_dir = "uploads/";
 $target_file = $target_dir . basename($_FILES["profilepix"]["name"]);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
@@ -245,3 +245,14 @@ if ($uploadOk == 0) {
 //   }
 
 
+
+// if(isset($_POST['register'])){
+	
+
+//     $dateOfBirth = $_POST['DOB'];
+//     $today = date("Y-m-d");
+//     $diff = date_diff(date_create($dateOfBirth), date_create($today));
+    
+//     if($diff->format('%y%') < 16){
+//       die("you are too young to register");
+//     }

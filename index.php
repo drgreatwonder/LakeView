@@ -1,7 +1,6 @@
-<?php session_start(); ?> 
+<?php session_start() ?>
 <?php require "header.php" ?>
-<?php 
-
+ <?php 
   // if (!isset($_SESSION['username'])) {
   // 	$_SESSION['msg'] = "You must log in first";
   // 	header('location: index.php');
@@ -11,7 +10,7 @@
   // 	unset($_SESSION['username']);
   // 	header("location: index.php");
   // }
-?>
+?> 
 <!DOCTYPE html>
 <html lang="en">
 

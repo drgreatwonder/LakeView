@@ -144,6 +144,7 @@ if(empty($_POST["initialpassword"])) {
 }
 
 
+
 if(empty($_POST["password"])) {
 
   $passworderror = "password is required";
@@ -154,6 +155,7 @@ if($initialpassword != $password) {
   $passworderror = "Password and Confirm Password does not match";
 
   }
+
   
  // Check image file size
 if ($_FILES["profilepix"]["size"] > 500000) {
